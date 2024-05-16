@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
 :root {
     --primary-color: #52489c;
@@ -6,13 +6,14 @@
     --accent-color: #f45b69;
     --text-dark: #333;
     --text-light: #ebebeb;
-    --primary-font: 'Arial', Helvetica, sans-serif;
+    --primary-font: Arial, Helvetica, sans-serif;
     --secondary-font: 'Mooli', sans-serif;
 }
 
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
+    margin: 0;
     color: var(--text-dark);
     background-color: var(--text-light);
 }
@@ -20,34 +21,64 @@ body {
 header, footer {
     background-color: var(--primary-color);
     color: var(--text-light);
-    padding: 10px;
     text-align: center;
+    padding: 1em 0;
+}
+
+header h1 {
+    font-family: var(--secondary-font);
+    margin: 0;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0.5em 0;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.gallery {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery figure {
+    margin: 0;
 }
 
 img {
     max-width: 100%;
-    height: auto;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+footer {
+    font-size: 0.8em;
 }
 
-nav a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
-@media screen and (max-width: 700px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
+/* Responsive Styles */
 @media screen and (min-width: 700px) {
     .gallery {
         display: grid;
@@ -56,16 +87,24 @@ nav a {
 }
 
 @media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
     nav ul {
-        flex-direction: row;
+        display: flex;
         justify-content: center;
     }
 
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    button.menu {
-        display: none;
+    nav li {
+        margin: 0 15px;
     }
 }
