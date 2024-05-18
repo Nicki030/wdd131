@@ -7,7 +7,7 @@ function viewerTemplate(pic, alt) {
 
 function viewHandler(event) {
     if (event.target.tagName === "IMG") {
-        const pic = event.target.src.split("-")[0] + "-full.jpeg";
+        const pic = event.target.src.replace('-sm', '-full'); 
         const alt = event.target.alt;
         const viewerHTML = viewerTemplate(pic, alt);
         document.body.insertAdjacentHTML("afterbegin", viewerHTML);
