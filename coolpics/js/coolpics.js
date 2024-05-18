@@ -1,4 +1,4 @@
-// js/coolpics.js
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const menuButton = document.querySelector(".menu-button");
@@ -46,5 +46,5 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("resize", handleResize);
     gallery.addEventListener("click", viewHandler);
 
-    handleResize(); 
+    handleResize();
 });
