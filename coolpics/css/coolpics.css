@@ -133,10 +133,19 @@ footer {
     display: grid;
     place-items: center;
     z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.viewer.show {
+    visibility: visible;
+    opacity: 1;
 }
 
 .viewer img {
     max-height: 100%;
+    max-width: 100%;
 }
 
 .viewer .close-viewer {
