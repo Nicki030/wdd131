@@ -94,3 +94,47 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+.hide {
+    display: none;
+  }
+  
+  .menu-button {
+    display: none;
+  }
+  
+  @media (max-width: 1000px) {
+    .menu-button {
+      display: block;
+    }
+    .menu {
+      display: none;
+    }
+  }
+  
+  .viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: grid;
+    place-items: center;
+    z-index: 1000;
+  }
+  
+  .viewer img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  .close-viewer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
