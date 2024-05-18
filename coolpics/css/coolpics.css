@@ -94,3 +94,56 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.menu-button {
+    display: none;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1000px) {
+    .menu-button {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.hide {
+        display: block;
+    }
+}
+
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    align-items: center;
+    color: white;
+}
+
+.viewer img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.close-viewer {
+    grid-row: 1;
+    grid-column: 1;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
