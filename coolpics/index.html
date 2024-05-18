@@ -8,11 +8,41 @@
     <meta name="author" content="Your Name">
     <link rel="stylesheet" href="css/coolpics.css">
     <script src="js/coolpics.js" defer></script>
+    <style>
+        .hide {
+            display: none;
+        }
+        .viewer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.75);
+            display: grid;
+            grid-template-rows: auto 1fr;
+            justify-items: center;
+            align-items: center;
+            color: white;
+            z-index: 1000;
+        }
+        .viewer img {
+            max-height: 100%;
+        }
+        .close-viewer {
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Cool Pics 📷</h1>
-        <nav>
+        <button class="menu-button">Menu</button>
+        <nav class="menu hide">
             <ul>
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#people">People</a></li>
@@ -38,6 +68,10 @@
             </div>
         </section>
     </main>
+    <div class="viewer hide">
+        <button class="close-viewer">X</button>
+        <img src="" alt="">
+    </div>
     <footer>
         © 2023 BYUI 
     </footer>
