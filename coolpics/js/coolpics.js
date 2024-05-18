@@ -1,35 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const menuButton = document.querySelector(".menu-button");
-    const menu = document.querySelector("nav .menu");
-    const viewer = document.querySelector(".viewer");
-    const closeViewer = document.querySelector(".close-viewer");
-    const viewerImage = document.querySelector(".viewer img");
+function viewerTemplate(pic, alt) {
+    return `<div class="viewer">
+      <button class="close-viewer">X</button>
+      <img src="${pic}" alt="${alt}">
+    </div>`;
+  }
   
-
-    menuButton.addEventListener("click", () => {
-      menu.classList.toggle("show");
-    });
-  
-
-    function handleResize() {
-      if (window.innerWidth > 1000) {
-        menu.classList.remove("show");
-      }
+  function viewHandler(event) {
+    if (event.target.tagName === "IMG") {
+      const pic = event.target.src.split("-")[0] + "-full.jpeg";
+      const alt = event.target.alt;
+      const viewerHTML = viewerTemplate(pic, alt);
+      document.body.insertAdjacentHTML("afterbegin", viewerHTML);
+      const closeButton = document.querySelector(".close-viewer");
+      closeButton.addEventListener("click", closeViewer);
     }
+  }
   
-    window.addEventListener("resize", handleResize);
-    handleResize();
+  function closeViewer() {
+    const viewer = document.querySelector(".viewer");
+    viewer.parentNode.removeChild(viewer);
+  }
   
-
-    document.querySelectorAll(".gallery img").forEach(img => {
-      img.addEventListener("click", () => {
-        viewerImage.src = img.src;
-        viewer.classList.remove("hide");
-      });
-    });
-  
-    closeViewer.addEventListener("click", () => {
-      viewer.classList.add("hide");
-    });
-  });
-  
+  const gallery = document.querySelector(".gallery");
+  gallery.addEventListener("click", viewHandler);

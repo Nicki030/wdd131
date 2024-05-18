@@ -123,6 +123,7 @@ footer {
     display: none;
 }
 
+
 .viewer {
     position: fixed;
     top: 0;
@@ -132,29 +133,15 @@ footer {
     background: rgba(0, 0, 0, 0.75);
     display: grid;
     place-items: center;
-    z-index: 1000;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s;
-}
-
-.viewer.show {
-    visibility: visible;
-    opacity: 1;
-}
-
-.viewer img {
+  }
+  
+  .viewer img {
     max-height: 100%;
-    max-width: 100%;
-}
-
-.viewer .close-viewer {
+  }
+  
+  .close-viewer {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: none;
-    border: none;
     color: white;
-    font-size: 24px;
-    cursor: pointer;
-}
+  }
