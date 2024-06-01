@@ -86,3 +86,33 @@ footer {
 .skiptocontent a:focus {
     top: 0;
 }
+
+.article-date {
+    font-size: larger; 
+}
+
+.article-details {
+    text-align: right;
+}
+
+.article-details {
+    border-right: 2px solid #ccc; 
+    padding: 0 20px; 
+}
+
+.article-title {
+    margin-top: 0; 
+}
+
+.article-img {
+    display: block;
+    margin: auto;
+}
+
+article {
+    margin-bottom: 20px; 
+}
+main {
+    max-width: 600px;
+    margin: auto;
+}
