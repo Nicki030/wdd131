@@ -22,13 +22,15 @@ body {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--primary-color);
     color: var(--text-light);
-    text-align: center;
     padding: 1em 0;
 }
 
-header img {
+header .logo {
     max-width: 50px;
 }
 
@@ -68,7 +70,7 @@ form button {
     margin-top: 1em;
 }
 
-#recipe-display img {
+#recipe-display .recipe-image {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
@@ -98,13 +100,17 @@ form button {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--primary-color);
     color: var(--text-light);
-    text-align: center;
     padding: 1em 0;
 }
 
 footer .social {
+    display: flex;
+    gap: 1em;
     margin: 1em 0;
 }
 
