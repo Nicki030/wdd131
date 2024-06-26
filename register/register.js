@@ -4,26 +4,25 @@ let participantCount = 1;
 
 document.addEventListener('DOMContentLoaded', () => {
     const addButton = document.getElementById('add-participant-btn');
+    const form = document.getElementById('registration-form');
 
     addButton.addEventListener('click', () => {
         participantCount++;
         addParticipant(participantCount);
     });
 
-    const form = document.getElementById('registration-form');
-
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         const total = totalFees();
-        const adultName = document.getElementById('adult-name').value;
+        const adultName = document.getElementById('adult_name').value;
         const summary = successTemplate({
             name: adultName,
             participants: participantCount,
             fees: total
         });
-        document.getElementById('form-section').style.display = 'none';
+        document.getElementById('registration-form').style.display = 'none';
         document.getElementById('summary-section').innerHTML = summary;
-        document.getElementById('summary-section').style.display = 'block';
+        document.getElementById('summary-section').classList.remove('hide');
     });
 });
 
@@ -31,11 +30,5 @@ function addParticipant(count) {
     const participantTemplateHTML = participantTemplate(count);
     const addButton = document.getElementById('add-participant-btn');
     addButton.insertAdjacentHTML('beforebegin', participantTemplateHTML);
-}
 
-function totalFees() {
-    let feeElements = document.querySelectorAll("[id^=fee]");
-    feeElements = [...feeElements];
-    const total = feeElements.reduce((sum, fee) => sum + Number(fee.value), 0);
-    return total;
 }
