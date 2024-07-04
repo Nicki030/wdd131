@@ -1,57 +1,23 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #735751;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-section {
-  margin: 2rem 0;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Additional styling for table and navigation */
-table.colors {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-}
-
-table.colors th, table.colors td {
-  border: 1px solid #ddd;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-table.colors th {
-  background-color: #f4f4f4;
-}
-
-table.colors td {
-  height: 50px;
-}
-
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #396E94;
-}
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+  header {
+    background-color: #735751;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
