@@ -98,7 +98,7 @@
         <img src="image/page2-wireframe.png" alt="page 2 wireframe" />
     </main>
     <script>
-        const travelTips = [
+       const travelTips = [
             {
                 tip: "Pack light",
                 details: "Pack only what you need to avoid carrying unnecessary weight.",
@@ -113,7 +113,20 @@
             }
         ];
 
+
+        function displayRandomTravelTip() {
+            const randomIndex = Math.floor(Math.random() * travelTips.length);
+            const randomTip = travelTips[randomIndex];
+            const tipElement = document.getElementById('random-travel-tip');
+            tipElement.innerHTML = `
+                <h4>${randomTip.tip}</h4>
+                <p>${randomTip.details}</p>
+                <img src="${randomTip.img}" alt="${randomTip.tip}">
+            `;
+        }
+
        
+        document.addEventListener('DOMContentLoaded', displayRandomTravelTip);
     </script>
 </body>
 </html>
