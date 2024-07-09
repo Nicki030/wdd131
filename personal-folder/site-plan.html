@@ -119,22 +119,7 @@
             }
         ];
 
-        function getRandomTip() {
-            const randomIndex = Math.floor(Math.random() * travelTips.length);
-            return travelTips[randomIndex];
-        }
-
-        function displayRandomTip() {
-            const tipContainer = document.getElementById('tip-container');
-            const tip = getRandomTip();
-            tipContainer.innerHTML = `
-                <h3>${tip.tip}</h3>
-                <p>${tip.details}</p>
-                <img src="${tip.img}" alt="${tip.tip}" />
-            `;
-        }
-
-        document.addEventListener('DOMContentLoaded', displayRandomTip);
+       
     </script>
 </body>
 </html>
