@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Site Plan</title>
-    <link type="text/css" rel="stylesheet" href="styles/site-plan.css" />
+    <link type="text/css" rel="stylesheet" href="site-plan.css" />
 </head>
 <body>
     <header>
@@ -30,7 +30,7 @@
         <hr />
         <h2>Branding</h2>
         <h3>Website Logo</h3>
-        <img src="image/logo.png" alt="Logo image" />
+        <img src="image/Image.png" alt="Logo image" />
         
         <hr />
         <h2>Style Guide</h2>
@@ -48,17 +48,17 @@
                     <th>Accent 2</th>
                 </tr>
                 <tr>
-                    <td class="primary">#DB324D</td>
-                    <td class="secondary">#EFA00B</td>
-                    <td class="accent1">#BDD358</td>
-                    <td class="accent2">#FFFFFF</td>
+                    <td class="primary">[#DB324D]</td>
+                    <td class="secondary">[#EFA00B]</td>
+                    <td class="accent1">[#BDD358]</td>
+                    <td class="accent2">[White]</td>
                 </tr>
             </tbody>
         </table>
         
         <h3>Typography</h3>
-        <h4>Heading Font: IM Fell French Canon SC</h4>
-        <h4>Paragraph Font: Lato, Helvetica, sans-serif</h4>
+        <h4>Heading Font: [IM Fell French Canon SC]</h4>
+        <h4>Paragraph Font: [Lato, Helvetica, sans-serif]</h4>
         
         <h3>Normal paragraph example</h3>
         <p>
@@ -83,7 +83,7 @@
         <h3>Home page</h3>
         <p>[content, images, data for the home page]</p>
         
-        <h3>Page 2</h3>
+        <h3>[Page 2]</h3>
         <p>[content, images, data for the subpage]</p>
         
         <h2>Wireframes</h2>
@@ -93,7 +93,7 @@
         <p>[Any additional details about home that the wireframe does not make clear]</p>
         <img src="image/home-wireframe.png" alt="home page wireframe" />
         
-        <h3>Page 2</h3>
+        <h3>[Page 2]</h3>
         <p>[Any additional details about page 2 that the wireframe does not make clear]</p>
         <img src="image/page2-wireframe.png" alt="page 2 wireframe" />
     </main>
@@ -113,20 +113,7 @@
             }
         ];
 
-    
-        function displayRandomTravelTip() {
-            const randomIndex = Math.floor(Math.random() * travelTips.length);
-            const randomTip = travelTips[randomIndex];
-            const tipElement = document.getElementById('random-travel-tip');
-            tipElement.innerHTML = `
-                <h4>${randomTip.tip}</h4>
-                <p>${randomTip.details}</p>
-                <img src="${randomTip.img}" alt="${randomTip.tip}">
-            `;
-        }
-
-
-        document.addEventListener('DOMContentLoaded', displayRandomTravelTip);
+       
     </script>
 </body>
 </html>
