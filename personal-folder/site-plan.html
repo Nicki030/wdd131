@@ -1,139 +1,140 @@
-
 <!DOCTYPE html>
 <html lang="en-us">
-	<head>
-		<meta charset="utf-8" />
-		<title>Site Plan</title>
-		<link type="text/css" rel="stylesheet" href="site-plan.css" />
-	</head>
+<head>
+    <meta charset="utf-8" />
+    <title>Site Plan</title>
+    <link type="text/css" rel="stylesheet" href="site-plan.css" />
+</head>
+<body>
+    <header>
+        <h1>HorizonHaven Site Plan</h1>
+        <h2>Nicole Johnston</h2>
+        <h2>WDD 131-03</h2>
+    </header>
+    <main>
+        <hr />
+        <h2>Overview</h2>
+        <h3>Purpose</h3>
+        <p>The purpose of this site is to share my travel experiences, tips, and guides with fellow travel enthusiasts. It aims to provide valuable insights and inspiration for planning memorable trips.</p>
+        
+        <h3>Audience</h3>
+        <p>The intended audience is travel enthusiasts, both seasoned travelers and those planning their first trips, who are looking for destination ideas, travel tips, and personal travel stories.</p>
+        
+        <h3>Dynamic elements</h3>
+        <p>
+            1. Random Travel Tip Generator: A function that displays a random travel tip each time the page is loaded.<br>
+            2. Search and Filter: A search bar and filter options that allow users to find blog posts based on destination, category, or date.<br>
+            3. Interactive Map: An embedded map that allows users to click on different countries to see travel blog posts related to that country.
+        </p>
+        
+        <hr />
+        <h2>Branding</h2>
+        <h3>Website Logo</h3>
+        <img src="image/Image.png" alt="Logo image" />
+        
+        <hr />
+        <h2>Style Guide</h2>
+        
+        <h3>Color Palette</h3>
+        Palette URL:
+        <a href="https://coolors.co/bdd358-efa00b-db324d-ffffff" target="_blank">https://coolors.co/bdd358-efa00b-db324d-ffffff</a>
+        
+        <table class="colors">
+            <tbody>
+                <tr>
+                    <th>Primary</th>
+                    <th>Secondary</th>
+                    <th>Accent 1</th>
+                    <th>Accent 2</th>
+                </tr>
+                <tr>
+                    <td class="primary">[#DB324D]</td>
+                    <td class="secondary">[#EFA00B]</td>
+                    <td class="accent1">[#BDD358]</td>
+                    <td class="accent2">[White]</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Typography</h3>
+        <h4>Heading Font: [IM Fell French Canon SC]</h4>
+        <h4>Paragraph Font: [Lato, Helvetica, sans-serif]</h4>
+        
+        <h3>Normal paragraph example</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        
+        <h3>Colored paragraph example</h3>
+        <p class="colored">
+            This paragraph uses a vibrant color palette from Coolors to create an engaging visual effect. The text is colored a bright red (#DB324D), which immediately draws attention. The background of the paragraph is a soft green (#BDD358), providing a pleasant and calming contrast to the red text. To add an additional layer of interest, a vibrant orange border (#EFA00B) is applied to the left side of the paragraph, making it stand out even more. All of this is set against a clean, white background (#FFFFFF), ensuring that the colors pop and the text remains highly readable. This combination of colors and design elements creates a visually appealing and dynamic paragraph that captures the reader's attention.
+        </p>
+        
+        <h3>Navigation</h3>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Page2</a>
+            <a href="#">Page3</a>
+        </nav>
+        
+        <hr />
+        
+        <h2>Content</h2>
+        <h3>Home page</h3>
+        <p>[content, images, data for the home page]</p>
+        
+        <h3>[Page 2]</h3>
+        <p>[content, images, data for the subpage]</p>
+        
+        <h2>Wireframes</h2>
+        <p>Create two wireframes for your site. One for each page and list them here:</p>
+        
+        <h3>Home</h3>
+        <p>[Any additional details about home that the wireframe does not make clear]</p>
+        <img src="image/home-wireframe.png" alt="home page wireframe" />
+        
+        <h3>[Page 2]</h3>
+        <p>[Any additional details about page 2 that the wireframe does not make clear]</p>
+        <img src="image/page2-wireframe.png" alt="page 2 wireframe" />
+    </main>
+    <script>
+        const travelTips = [
+            {
+                tip: "Pack light",
+                details: "Pack only what you need to avoid carrying unnecessary weight.",
+                img: "path/to/image1.jpg",
+                new: true
+            },
+            {
+                tip: "Stay hydrated",
+                details: "Always carry a bottle of water to stay hydrated during your travels.",
+                img: "path/to/image2.jpg",
+                new: false
+            },
+            {
+                tip: "Learn basic phrases",
+                details: "Learn basic phrases of the local language to help you communicate better.",
+                img: "path/to/image3.jpg",
+                new: true
+            }
+        ];
 
-	<body>
-		<header>
-			<h1>HorizonHaven Site Plan</h1>
-			<h2>Nicole Johnston</h2>
-			<h2>WDD 131-03</h2>
-			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
-		</header>
-		<main>
-			<!-- ------------------------Steps 2-3------------------------------ -->
-			<hr />
-			<h2>Overview</h2>
-			<h3>Purpose</h3>
-			<p>The purpose of this site is to share my travel experiences, tips, and guides with fellow travel enthusiasts. It aims to provide valuable insights and inspiration for planning memorable trips.</p>
- 
+        function getRandomTip() {
+            const randomIndex = Math.floor(Math.random() * travelTips.length);
+            return travelTips[randomIndex];
+        }
 
+        function displayRandomTip() {
+            const tipContainer = document.getElementById('tip-container');
+            const tip = getRandomTip();
+            tipContainer.innerHTML = `
+                <h3>${tip.tip}</h3>
+                <p>${tip.details}</p>
+                <img src="${tip.img}" alt="${tip.tip}" />
+            `;
+        }
 
-			<h3>Audience</h3>
-			<p>The intended audience is travel enthusiasts, both seasoned travelers and those planning their first trips, who are looking for destination ideas, travel tips, and personal travel stories.</p></p>
-
-
-			<h3>Dynamic elements</h3>
-			<p> 1. Random Travel Tip Generator: A function that displays a random travel tip each time the page is loaded.<br>
-				2. Interactive Map: An embedded map that allows users to click on different countries to see travel blog posts related to that country.<br>
-				3. Search and Filter: A search bar and filter options that allow users to find blog posts based on destination, category, or date.
-			  </p>
-
-			<hr />
-			<h2>Branding</h2>
-			<h3>Website Logo</h3>
-		
-			<img src="image/Image.png" alt="Logo image" />
-			<hr />
-			<h2>Style Guide</h2>
-
-			
-
-			<h3>Color Palette</h3>
-		
-			Palette URL:
-			<a
-				href="https://coolors.co/bdd358-efa00b-db324d-ffffff"
-				target="_blank"
-				>https://coolors.co/bdd358-efa00b-db324d-ffffff</a
-			>
-
-			<table class="colors">
-				<tbody>
-					<tr>
-						<th>Primary</th>
-						<th>Secondary</th>
-						<th>Accent 1</th>
-						<th>Accent 2</th>
-					</tr>
-					
-					<tr>
-						<td class="primary">[#DB324D]</td>
-						<td class="secondary">[#EFA00B]</td>
-						<td class="accent1">[#BDD358]</td>
-						<td class="accent2">[White]</td>
-					</tr>
-				</tbody>
-			</table>
-
-
-
-			<h3>Typography</h3>
-
-			<h4>
-				Heading Font: [IM Fell French Canon SC]
-
-			</h4>
-			<h4>
-				Paragraph Font: [Lato, Helvetica, sans-serif]
-
-			</h4>
-			<h3>Normal paragraph example</h3>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-				commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-				velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-				occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				mollit anim id est laborum.
-			</p>
-			<h3>Colored paragraph example</h3>
-			<p class="colored">
-				This paragraph uses a vibrant color palette from Coolors to create an engaging visual effect. The text is colored a bright red (#DB324D), 
-				which immediately draws attention. The background of the paragraph is a soft green (#BDD358), providing a pleasant and calming contrast to the red text. 
-				To add an additional layer of interest, a vibrant orange border (#EFA00B) is applied to the left side of the paragraph, making it stand out even more. 
-				All of this is set against a clean, white background (#FFFFFF), ensuring that the colors pop and the text remains highly readable. This 
-				combination of colors and design elements creates a visually appealing and dynamic paragraph that captures the reader's attention
-			</p>
-
-			
-			<h3>Navigation</h3>
-			<nav>
-				<a href="#">Home</a>
-				<a href="#">Page2</a>
-				<a href="#">Page3</a>
-			</nav>
-			<hr />
-
-			<h2>Content</h2>
-			<h3>Home page</h3>
-			<p>[content, images, data for the home page]</p>
-			<h3>[Page 2]</h3>
-			<p>[content, images, data for the subpage]</p>
-			<h2>Wireframes</h2>
-			<p>
-				Create two wireframes for your site. One for each page and list them
-				here
-			</p>
-
-			<h3>Home</h3>
-			<p>
-				[Any additional details about home that the wireframe does not make
-				clear]
-			</p>
-			<img src="image/5fdb3112a70f4c50aecb9a8000b12199-free.png" alt="home page wireframe" />
-
-			<h3>[Page 2]</h3>
-			<p>
-				[Any additional details about page 2 that the wireframe does not make
-				clear]
-			</p>
-			<img src="image/5fdb3112a70f4c50aecb9a8000b12199-free.png" alt="page 2 wireframe" />
-		</main>
-	</body>
+        document.addEventListener('DOMContentLoaded', displayRandomTip);
+    </script>
+</body>
 </html>
