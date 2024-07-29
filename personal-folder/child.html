@@ -3,23 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Child Page</title>
-    <link rel="stylesheet" href="site-plan.css">
+    <title>Travel Blog - Child Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Child Page</h1>
+        <h1>Travel Blog - Child Page</h1>
         <nav>
-            <a href="site-plan.html">Back to Home Page</a>
+
         </nav>
     </header>
     <main>
         <section>
             <h2>Content of Child Page</h2>
-            <p>This is the child page of my personal website.</p>
-            <img src="path-to-your-image.jpg" alt="Description of the image">
+            <h3>Introduction</h3>
+            <p>Welcome to our curated guide to some of the most exciting travel destinations around the globe. Whether you're looking for bustling city life, tranquil beaches, or adventurous mountain trails, we've got something for every traveler.</p>
+            <img src="path-to-your-image.jpg" alt="Description of the image" width="800" height="400">
         </section>
+        
+        <!-- Random Travel Tip Generator -->
+        <section id="travel-tip-section">
+            <h3>Travel Tip of the Day</h3>
+            <p id="travel-tip"></p>
+        </section>
+
+        <!-- Search and Filter Functionality -->
+        <section id="search-section">
+            <h3>Search and Filter Blog Posts</h3>
+            <input type="text" id="search" placeholder="Search by destination, category, or date..." onkeyup="filterBlogPosts()">
+            <ul id="blog-post-list">
+                <li data-destination="Shibuya" data-category="City" data-date="2023-05-10">Exploring Shibuya: The Heart of Tokyo</li>
+                <li data-destination="Shinjuku" data-category="City" data-date="2023-06-14">Discovering Shinjuku: Tokyo's Entertainment Hub</li>
+                <li data-destination="Asakusa" data-category="Cultural" data-date="2023-07-22">Historical Asakusa: A Glimpse into Tokyo's Past</li>
+                <li data-destination="Ginza" data-category="Shopping" data-date="2023-08-03">Shopping in Ginza: Tokyo's Premier Shopping District</li>
+                <li data-destination="Akihabara" data-category="Technology" data-date="2023-09-15">Akihabara: The Tech and Otaku Center of Tokyo</li>
+                <li data-destination="Roppongi" data-category="Nightlife" data-date="2023-10-10">Roppongi Nights: Tokyo's Nightlife District</li>
+                <li data-destination="Ueno" data-category="Nature" data-date="2023-11-05">Ueno Park: A Natural Haven in Tokyo</li>
+                <li data-destination="Odaiba" data-category="Modern" data-date="2023-12-12">Modern Odaiba: Tokyo's Futuristic Island</li>
+            </ul>
+        </section>
+
+        <!-- Interactive Map -->
+        <section id="map-section">
+            <h3>Interactive Travel Map</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.3795709222536!2d139.6842180769522!3d35.69227597258383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f2d5c37b3ab5%3A0xe5e8e1c135847225!2z77yh!5e0!3m2!1sen!2sus!4v1722294321626!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <!-- Blog Post List -->
+        <section id="blog-posts">
+            <h3>Recent Blog Posts</h3>
+            <ul id="blog-post-list">
+               <li data-destination="Shibuya" data-category="City" data-date="2023-05-10">Exploring Shibuya: The Heart of Tokyo</li>
+                <li data-destination="Shinjuku" data-category="City" data-date="2023-06-14">Discovering Shinjuku: Tokyo's Entertainment Hub</li>
+                <li data-destination="Asakusa" data-category="Cultural" data-date="2023-07-22">Historical Asakusa: A Glimpse into Tokyo's Past</li>
+                <li data-destination="Ginza" data-category="Shopping" data-date="2023-08-03">Shopping in Ginza: Tokyo's Premier Shopping District</li>
+                <li data-destination="Akihabara" data-category="Technology" data-date="2023-09-15">Akihabara: The Tech and Otaku Center of Tokyo</li>
+                <li data-destination="Roppongi" data-category="Nightlife" data-date="2023-10-10">Roppongi Nights: Tokyo's Nightlife District</li>
+                <li data-destination="Ueno" data-category="Nature" data-date="2023-11-05">Ueno Park: A Natural Haven in Tokyo</li>
+                <li data-destination="Odaiba" data-category="Modern" data-date="2023-12-12">Modern Odaiba: Tokyo's Futuristic Island</li>
+        </section>
+        
+        <button id="backButton">Back to Site Plan</button>
     </main>
-    <script src="main.js" type="module"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

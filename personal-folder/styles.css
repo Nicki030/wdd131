@@ -1,0 +1,76 @@
+/* Basic CSS styles for layout */
+body {
+
+  --heading-font: "IM Fell French Canon SC";
+  --paragraph-font: Lato, Helvetica, sans-serif;
+
+    line-height: 1.6;
+    background-color: #ffffff; /* Light blue background */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #cbdc7c; /* Light salmon background */
+    color: #c20a0a; /* White text color */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #c20a0a;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #db324d; /* Vibrant red color */
+}
+
+button {
+    background-color: #cbdc7c; /* Gold color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #cbdc7c; /* Darker gold on hover */
+}
+
+/* Additional section styling */
+#travel-tip-section, #search-section, #map-section, #blog-posts {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #c20a0a;
+}
