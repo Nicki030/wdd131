@@ -1,0 +1,59 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #Bdd358;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+#filter-options {
+    margin-bottom: 1em;
+}
+
+#project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    border: 1px solid #ddd;
+    margin: 0.5em;
+    padding: 1em;
+    width: calc(33.333% - 2em);
+    box-sizing: border-box;
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+}
