@@ -1,0 +1,52 @@
+/* Basic CSS styles for layout */
+body {
+    --heading-font: "IM Fell French Canon SC", serif;
+    --paragraph-font: Lato, Helvetica, sans-serif;
+  
+    line-height: 1.6;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #cbdc7c; /* Light green background */
+    color: #fff; /* White text color */
+    padding: 10px 0;
+    text-align: center;
+    font-family: var(--heading-font);
+}
+
+main {
+    padding: 20px;
+    font-family: var(--paragraph-font);
+}
+
+h1, h2, h3 {
+    color: #db324d; /* Vibrant red color */
+    font-family: var(--heading-font);
+}
+
+button {
+    background-color: #cbdc7c; /* Light green color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #b57309; /* Darker gold on hover */
+}
+
+/* Additional section styling */
+p {
+    margin: 10px 0;
+}
